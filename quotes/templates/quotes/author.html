@@ -1,0 +1,1 @@
+{% extends 'quotes/base.html' %}{% block content %}<h1>{{author.fullname}}</h1><p><b>Дата народження:</b> {{author.born_date}}</p><p><b>Місце народження:</b> {{author.born_location}}</p><p>{{author.description}}</p><h3>Цитати автора</h3>{% for q in author.quotes.all %}<p>“{{q.quote}}”</p>{% endfor %}{% endblock %}
